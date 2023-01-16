@@ -231,4 +231,60 @@ We cannot iterate over a weak set or weak map and there is no actual size proper
 
 // Define a class:
 
+// Linked list is a linear data structure. Ordered collection of data but Unlike arrays, the nodes are not stored in sequentially memory location. 
+//Nodes are connected using pointer
 
+// Each node has a data and a pointer/reference to the next element.
+
+// So, think of every node as an object with two key value pairs. node1.data and node1.next
+
+// Last element in the node is called tail. 
+
+// Only property in our linkedlist class will be head because that's where it begins. 
+
+// we would have a class for Node. 
+
+
+/* 
+    Let's take an example:
+
+    const n1 = {
+        data: 100
+    }
+
+    const n2 = {
+        data: 200
+    };
+
+    n1.next = n2;
+
+    This will result in assigning the n2 object to a property called next in n1
+
+    So, n1 will become  {
+        data: 100,
+        next: {
+            data: 200
+        }
+    }
+
+    Let's create this node class
+
+
+*/
+
+class Node{
+    constructor(data, next = null){
+        this.data = data;
+        this.next = next;
+    }
+}
+
+const n1 = new Node(100); // This will create n1 = {data: 100, next: null};
+
+
+class LinkedList{
+    constructor(){
+        this.head = null;
+        this.size = 0;
+    }
+}
